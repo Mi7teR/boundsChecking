@@ -3,7 +3,7 @@ package boundsChecking
 func BoundsCheck(v uint64) []byte {
 	b := []byte{0, 1, 2, 3, 4, 5, 6, 7}
 
-	_ = b[7] //nice performance lol
+	_ = b[7]
 
 	b[0] = byte(v)
 	b[1] = byte(v >> 8)
@@ -17,7 +17,7 @@ func BoundsCheck(v uint64) []byte {
 	return b
 }
 
-func NoBoundsCheck(v uint64) []byte  {
+func NoBoundsCheck(v uint64) []byte {
 	b := []byte{0, 1, 2, 3, 4, 5, 6, 7}
 
 	b[0] = byte(v)
